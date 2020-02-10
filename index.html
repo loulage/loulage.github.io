@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey! I'm Lourenço</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        font-family: "Roboto", "Helvetica", sans-serif;
+        background: black;
+        color: white;
+    }
+    
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 5fr 4fr;
+        grid-template-rows: 1fr 2fr 4fr 3fr;
+        grid-template-areas: ". header nav" ". . photo" ". main photo" ". . photo";
+        height: 100vh;
+        margin: 2em;
+    }
+    /*HEADER*/
+    
+    header {
+        grid-area: header;
+        font-weight: 400;
+        font-size: 1em;
+        display: flex
+    }
+    
+    header h2 {
+        margin: 0;
+        padding: 0;
+        align-self: end;
+        justify-self: end;
+    }
+    /*NAV*/
+    
+    nav {
+        grid-area: nav;
+        place-self: end start;
+        font-weight: 600;
+        font-size: 1em;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    nav ul {
+        list-style-type: none;
+        padding: 0;
+    }
+    
+    nav ul li {
+        float: left;
+        display: block;
+        text-align: center;
+        padding-left: 0rem;
+        padding-right: 1rem;
+        text-decoration: none;
+    }
+    
+    .icon-bar {
+        margin-left: 10em;
+    }
+    
+    .icon-bar a {
+        padding-right: 0.5em;
+    }
+    /*MAIN*/
+    
+    main {
+        grid-area: main;
+    }
+    
+    main h1 {
+        font-size: 2.6em;
+        margin-bottom: 0;
+    }
+    
+    .btn {
+        color: white;
+        padding: 0.8em 1.6em;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1rem;
+        font-weight: 600;
+    }
+    
+    .btn-left {
+        background-color: #EB436B;
+        border: none;
+    }
+    
+    .btn-right {
+        background-color: black;
+        border: 3px solid #EB436B;
+        margin-left: 1rem;
+    }
+    /*PHOTO*/
+    
+    .photo {
+        grid-area: photo;
+        background: url(img/lourenco03-cut-bw.png);
+        background-size: cover;
+    }
+</style>
+
+<body>
+    <div class="grid-container">
+
+
+        <!--Header-->
+        <header>
+            <h2> Portifolio </h2>
+        </header>
+
+        <!--Navbar-->
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Project</li>
+                <li>Contact</li>
+            </ul>
+
+            <div class="icon-bar">
+                <a href="#"><i class="fa fa-linkedin" style="font-size: 2em; color:#EB436B;"></i></a>
+                <a href="#"><i class="fa fa-github" style="font-size: 2em; color:#EB436B;"></i></a>
+                <a href="#"><i class="fa fa-twitter" style="font-size: 2em; color:#EB436B;"></i></a>
+            </div>
+        </nav>
+
+        <!--Main-->
+        <main>
+            <h1>Hi, I'm Lourenço <br> Web Developer</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet corrupti aut beatae veniam consequuntur nulla quidem, pariatur error perspiciatis officia consequatur cupiditate numquam, labore, blanditiis nam saepe recusandae ratione architecto?</p>
+            <button class="btn btn-left">Hire Me</button>
+            <button class="btn btn-right">Latest Works</button>
+        </main>
+
+        <!--Foto a Direita-->
+        <img class="photo" alt=".">
+
+    </div>
+    <!--grid-container-->
+
+
+</body>
+
+</html>
