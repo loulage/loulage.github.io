@@ -16,15 +16,15 @@
         background: black;
         color: white;
     }
-    /*HOME STYLE*/
+    /*START-HOME STYLE PAGE*/
     
     .grid-container-home {
         display: grid;
         grid-template-columns: 1fr 5fr 4fr;
         grid-template-rows: 1fr 2fr 4fr 3fr;
         grid-template-areas: ". header nav" ". . photo" ". main photo" ". . photo";
+        /* " . " means empty space */
         height: 100vh;
-        margin: 2em;
     }
     /*HEADER*/
     
@@ -62,7 +62,7 @@
         display: block;
         text-align: center;
         padding-left: 0rem;
-        padding-right: 0.8rem;
+        padding-right: 0.9rem;
         text-decoration: none;
     }
     
@@ -78,7 +78,7 @@
     
     .icon-bar {
         /*Espaçar icones a direita*/
-        margin-left: 8em;
+        margin-left: 4em;
     }
     
     .icon-bar a {
@@ -134,24 +134,53 @@
         background-size: cover;
     }
     /*END OF HOME STYLE*/
-    /*ABOUT STYLE*/
+    /*START-ABOUT STYLE*/
     
-    .grid-container-about {
+    #grid-container-about {
         display: grid;
-        grid-template-columns: 1.5fr 5fr 3fr 0.3fr 3fr 1.5fr;
-        grid-template-rows: 0.8fr 0.4fr 0.8fr 3fr 0.3fr 3fr 2fr;
+        grid-template-columns: 1.5fr 5fr 3fr 0.15fr 3fr 1.5fr;
+        grid-template-rows: 0.8fr 0.4fr 0.8fr 3fr 0.2fr 3fr 2fr;
         grid-template-areas: ". . . . . ." "deco . . . . ." ". . . . . ." ". about-main values . photo2 ." ". about-main . . photo2 ." ". about-main skills . photo2 ." ". . . . . .";
         height: 100vh;
-        margin: 2em;
+        background: white;
+        color: black;
     }
     
     .deco {
         grid-area: deco;
         background: #EB436B;
     }
+    /*ABOUT*/
     
     .about-main {
         grid-area: about-main;
+        padding-right: 2em;
+    }
+    
+    .about-main h1 {
+        font-size: 2.6em;
+    }
+    
+    .about-main h3 {
+        font-weight: 600;
+    }
+    
+    .about-main p {
+        padding-right: 5em;
+        line-height: 2em;
+    }
+    /*Skillset - Values & Skills*/
+    
+    .skillset {
+        background: black;
+        color: white;
+        padding-left: 2em;
+    }
+    
+    .skillset ul {
+        list-style: none;
+        padding: 0;
+        line-height: 1.5em;
     }
     
     .values {
@@ -161,9 +190,13 @@
     .skills {
         grid-area: skills;
     }
+    /*Photo 2 section*/
     
     .photo2 {
         grid-area: photo2;
+        background: url(img/lourenco01-cut-bw.png);
+        background-size: cover;
+        background-position: -4.5rem;
     }
 </style>
 
@@ -181,6 +214,7 @@
         <nav>
             <ul>
                 <li><a href=#>Home</a></li>
+                <li><a href="#grid-container-about">About</a></li>
                 <li><a href=#>Projects</a></li>
                 <li><a href=#>Contact</a></li>
             </ul>
@@ -209,19 +243,19 @@
     <!--grid-container-HOME-->
 
     <!--ABOUT SECTION-->
-    <div class="grid-container-about">
+    <div id="grid-container-about">
         <!--Decoration-->
         <div class="deco">
         </div>
         <!--Main Text-->
         <article class="about-main">
-            <h1>About</h1>
+            <h1>About</h1> <br>
             <h3>Lorem ipsum.</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut enim fugit odit deleniti est beatae ratione totam exercitationem error veniam.</p>
         </article>
 
         <!--Values Text-->
-        <section class="values">
+        <section class="skillset values">
             <h2>Values</h2>
             <ul>
                 <li>lorem</li>
@@ -231,7 +265,7 @@
         </section>
 
         <!--Skills Text-->
-        <section class="skills">
+        <section class="skillset skills">
             <h2>Skills</h2>
             <ul>
                 <li>lorem</li>
