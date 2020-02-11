@@ -17,7 +17,7 @@
         color: white;
     }
     
-    .grid-container {
+    .grid-container-home {
         display: grid;
         grid-template-columns: 1fr 5fr 4fr;
         grid-template-rows: 1fr 2fr 4fr 3fr;
@@ -61,12 +61,23 @@
         display: block;
         text-align: center;
         padding-left: 0rem;
-        padding-right: 1rem;
+        padding-right: 0.8rem;
         text-decoration: none;
     }
     
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        transition-duration: 0.4s;
+    }
+    
+    nav ul li a:hover {
+        color: #EB436B;
+    }
+    
     .icon-bar {
-        margin-left: 10em;
+        /*Espaçar icones a direita*/
+        margin-left: 8em;
     }
     
     .icon-bar a {
@@ -91,6 +102,7 @@
         border-radius: 5px;
         font-size: 1rem;
         font-weight: 600;
+        transition-duration: 0.4s;
     }
     
     .btn-left {
@@ -103,6 +115,16 @@
         border: 3px solid #EB436B;
         margin-left: 1rem;
     }
+    
+    .btn-left:hover {
+        box-shadow: 3px 3px 1.5px rgb(37, 37, 37);
+        border: 2px solid white;
+    }
+    
+    .btn-right:hover {
+        border: 3px solid white;
+        box-shadow: 3px 3px 1.5px rgb(37, 37, 37);
+    }
     /*PHOTO*/
     
     .photo {
@@ -113,7 +135,7 @@
 </style>
 
 <body>
-    <div class="grid-container">
+    <div class="grid-container-home">
 
 
         <!--Header-->
@@ -124,28 +146,30 @@
         <!--Navbar-->
         <nav>
             <ul>
-                <li>Home</li>
-                <li>Project</li>
-                <li>Contact</li>
+                <li><a href=#>Home</a></li>
+                <li><a href=#>Projects</a></li>
+                <li><a href=#>Contact</a></li>
             </ul>
 
             <div class="icon-bar">
-                <a href="#"><i class="fa fa-linkedin" style="font-size: 2em; color:#EB436B;"></i></a>
-                <a href="#"><i class="fa fa-github" style="font-size: 2em; color:#EB436B;"></i></a>
+                <a href="www.linkedin.com/in/lourencolage"><i class="fa fa-linkedin" style="font-size: 2em; color:#EB436B;"></i></a>
+                <a href="https://github.com/loulage"><i class="fa fa-github" style="font-size: 2em; color:#EB436B;"></i></a>
                 <a href="#"><i class="fa fa-twitter" style="font-size: 2em; color:#EB436B;"></i></a>
             </div>
         </nav>
 
         <!--Main-->
         <main>
-            <h1>Hi, I'm Lourenço <br> Web Developer</h1>
+            <h1>Hi, I'm Lourenço<br>Web Developer</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet corrupti aut beatae veniam consequuntur nulla quidem, pariatur error perspiciatis officia consequatur cupiditate numquam, labore, blanditiis nam saepe recusandae ratione architecto?</p>
             <button class="btn btn-left">Hire Me</button>
             <button class="btn btn-right">Latest Works</button>
         </main>
 
         <!--Foto a Direita-->
-        <img class="photo" alt=".">
+        <section class="photo">
+
+        </section>
 
     </div>
     <!--grid-container-->
