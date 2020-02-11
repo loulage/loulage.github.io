@@ -16,6 +16,7 @@
         background: black;
         color: white;
     }
+    /*HOME STYLE*/
     
     .grid-container-home {
         display: grid;
@@ -132,9 +133,21 @@
         background: url(img/lourenco03-cut-bw.png);
         background-size: cover;
     }
+    /*END OF HOME STYLE*/
+    /*ABOUT STYLE*/
+    
+    .grid-container-about {
+        display: grid;
+        grid-template-columns: 1fr 5fr 3fr 0.5fr 3fr 1fr;
+        grid-template-rows: 0.7fr 0.6fr 0.7fr 3fr 0.5fr 3fr 2fr;
+        grid-template-areas: ". . . . . ." "deco . . . . ." ". . . . . ." ". about-main values . photo2 ." ". about-main . . photo2 ." ". about-main skills . photo2 ." ". . . . . .";
+        height: 100vh;
+        margin: 2em;
+    }
 </style>
 
 <body>
+    <!--HOME SECTION-->
     <div class="grid-container-home">
 
 
@@ -152,7 +165,7 @@
             </ul>
 
             <div class="icon-bar">
-                <a href="www.linkedin.com/in/lourencolage"><i class="fa fa-linkedin" style="font-size: 2em; color:#EB436B;"></i></a>
+                <a href="https://www.linkedin.com/in/lourencolage"><i class="fa fa-linkedin" style="font-size: 2em; color:#EB436B;"></i></a>
                 <a href="https://github.com/loulage"><i class="fa fa-github" style="font-size: 2em; color:#EB436B;"></i></a>
                 <a href="#"><i class="fa fa-twitter" style="font-size: 2em; color:#EB436B;"></i></a>
             </div>
@@ -172,7 +185,12 @@
         </section>
 
     </div>
-    <!--grid-container-->
+    <!--grid-container-HOME-->
+
+    <!--ABOUT SECTION-->
+    <div class="grid-container-about">
+
+    </div>
 
 
 </body>
