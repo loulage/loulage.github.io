@@ -138,11 +138,32 @@
     
     .grid-container-about {
         display: grid;
-        grid-template-columns: 1fr 5fr 3fr 0.5fr 3fr 1fr;
-        grid-template-rows: 0.7fr 0.6fr 0.7fr 3fr 0.5fr 3fr 2fr;
+        grid-template-columns: 1.5fr 5fr 3fr 0.3fr 3fr 1.5fr;
+        grid-template-rows: 0.8fr 0.4fr 0.8fr 3fr 0.3fr 3fr 2fr;
         grid-template-areas: ". . . . . ." "deco . . . . ." ". . . . . ." ". about-main values . photo2 ." ". about-main . . photo2 ." ". about-main skills . photo2 ." ". . . . . .";
         height: 100vh;
         margin: 2em;
+    }
+    
+    .deco {
+        grid-area: deco;
+        background: #EB436B;
+    }
+    
+    .about-main {
+        grid-area: about-main;
+    }
+    
+    .values {
+        grid-area: values;
+    }
+    
+    .skills {
+        grid-area: skills;
+    }
+    
+    .photo2 {
+        grid-area: photo2;
     }
 </style>
 
@@ -189,8 +210,41 @@
 
     <!--ABOUT SECTION-->
     <div class="grid-container-about">
+        <!--Decoration-->
+        <div class="deco">
+        </div>
+        <!--Main Text-->
+        <article class="about-main">
+            <h1>About</h1>
+            <h3>Lorem ipsum.</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut enim fugit odit deleniti est beatae ratione totam exercitationem error veniam.</p>
+        </article>
 
+        <!--Values Text-->
+        <section class="values">
+            <h2>Values</h2>
+            <ul>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </section>
+
+        <!--Skills Text-->
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+            </ul>
+        </section>
+
+        <!--Photo2-->
+        <div class="photo2">
+        </div>
     </div>
+    <!--END ABOUT SECTION-->
 
 
 </body>
