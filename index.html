@@ -16,6 +16,10 @@
         background: black;
         color: white;
     }
+    
+    .outline-title {
+        display: none;
+    }
     /*START-HOME STYLE PAGE*/
     
     .grid-container-home {
@@ -86,11 +90,11 @@
     }
     /*MAIN*/
     
-    main {
+    #main {
         grid-area: main;
     }
     
-    main h1 {
+    #main h1 {
         font-size: 2.6em;
         margin-bottom: 0;
     }
@@ -254,18 +258,26 @@
         color: white;
     }
     
-    .skillset h2 {
-        font-weight: 500;
-    }
-    
-    .skillset ul {
-        list-style: none;
-        padding: 0;
-        line-height: 1.5em;
-    }
-    
     .values {
         grid-area: values;
+        padding: 2em;
+    }
+    
+    .values h2 {
+        font-weight: 500;
+        margin: 0;
+    }
+    
+    .values ul {
+        list-style: none;
+        padding: 0;
+        line-height: 2em;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .values ul li {
+        padding-right: 1em;
     }
     
     .skills {
@@ -277,50 +289,55 @@
         grid-area: photo2;
         background: url(img/lourenco01-cut-bw.png);
         background-size: cover;
-        background-position: -4.5rem;
+        background-position: -5rem;
     }
 </style>
 
 <body>
+    <h1 class="outline-title">Root</h1>
     <!--HOME SECTION-->
-    <div class="grid-container-home">
+    <section class="grid-container-home">
+        <h1 class="outline-title">Home-section</h1>
 
 
         <!--Header-->
         <header>
+            <h1 class="outline-title">Header</h1>
             <h2> Portifolio </h2>
         </header>
 
         <!--Navbar-->
         <nav>
+            <h1 class="outline-title">Navbar</h1>
             <ul>
-                <li><a href=#>Home</a></li>
-                <li><a href="#grid-container-about">About</a></li>
-                <li><a href=#>Projects</a></li>
-                <li><a href=#>Contact</a></li>
+                <li><a href=# title="Go to home section of this webpage">Home </a></li>
+                <li><a href="#grid-container-about" title="Go to about section of this webpage">About</a></li>
+                <li><a href=# title="Go to projects section of this webpage">Projects</a></li>
+                <li><a href=# title="Go to contact section of this webpage">Contact</a></li>
             </ul>
 
             <div class="icon-bar">
-                <a href="https://www.linkedin.com/in/lourencolage"><i class="fa fa-linkedin" style="font-size: 2em; color:#EB436B;"></i></a>
-                <a href="https://github.com/loulage"><i class="fa fa-github" style="font-size: 2em; color:#EB436B;"></i></a>
-                <a href="#"><i class="fa fa-twitter" style="font-size: 2em; color:#EB436B;"></i></a>
+                <a href="https://www.linkedin.com/in/lourencolage" title="Go to lourenço's linkedin profile"><i class="fa fa-linkedin" style="font-size: 2em; color:#EB436B;"></i></a>
+                <a href="https://github.com/loulage" title="Go to lourenço's github profile"><i class="fa fa-github" style="font-size: 2em; color:#EB436B;"></i></a>
+                <a href="#" title="Go to lourenço's twitter profile"><i class="fa fa-twitter" style="font-size: 2em; color:#EB436B;"></i></a>
             </div>
         </nav>
 
         <!--Main-->
-        <main>
+        <section id="main">
+            <h1 class="outline-title">Main-home</h1>
             <h1>Hi, I'm Lourenço<br>Web Developer</h1>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet corrupti aut beatae veniam consequuntur nulla quidem, pariatur error perspiciatis officia consequatur cupiditate numquam, labore, blanditiis nam saepe recusandae ratione architecto?</p>
             <button class="btn btn-left">Hire Me</button>
             <button class="btn btn-right">Latest Works</button>
-        </main>
+        </section>
 
         <!--Foto a Direita-->
         <section class="photo">
-
+            <h1 class="outline-title">photo1</h1>
         </section>
 
-    </div>
+    </section>
     <!--End-grid-container-HOME-->
 
     <!--ABOUT SECTION-->
@@ -343,12 +360,16 @@
                 <li>lorem</li>
                 <li>lorem</li>
                 <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+                <li>lorem</li>
+
             </ul>
         </section>
 
 
         <!--Skills Text-->
-        <div class="skillset skills slider-wrapper">
+        <section class="skillset skills slider-wrapper">
             I can write
             <div class="slider">
                 <div class="slider-text1">HTML</div>
@@ -356,19 +377,12 @@
                 <div class="slider-text3">JS</div>
                 <div class="slider-text4">C#</div>
             </div>
-        </div>
-        <!--<section class="skillset skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>lorem</li>
-                <li>lorem</li>
-                <li>lorem</li>
-            </ul>
-        </section>-->
+        </section>
+
 
         <!--Photo2-->
-        <div class="photo2">
-        </div>
+        <section class="photo2">
+        </section>
     </div>
     <!--END ABOUT SECTION-->
 
